@@ -1,0 +1,26 @@
+.paper > pre {
+    width: 450px;
+    overflow: auto;
+}
+
+.two > img {
+    width: 250px;
+}
+
+td > img {
+    width: 250px;
+}
+
+@media (max-width:760px) {
+    td > img {
+        display: none;
+    }
+    .tdimg {
+        display: none;
+        width: 0%;
+        padding: 0;
+    }
+    .tdcontent {
+        width: 100%;
+    }
+}
