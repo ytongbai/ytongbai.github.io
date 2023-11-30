@@ -41,10 +41,10 @@
 
 <section class="hero">
   <div class="hero-body">
-    <div class="container is-max-desktop">
+    <div class="container is-widescreen">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Sequential Modeling Enables Scalable Learning for Large Vision Models</h1>
+          <h1 class="title is-1 publication-title">Sequential Modeling Enables Scalable Learning for <br> Large Vision Models</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://yutongbai.com/">Yutong Bai</a><sup>1,2,*</sup>,</span>&nbsp;
@@ -119,6 +119,7 @@
 
 
 
+
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -127,11 +128,11 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We introduce a novel sequential modeling approach which enables learning a Large Vision Model (LVM) without making use of any linguistic data. 
-            To do this, we define a common format, "visual sentences", in which we can represent raw images and videos as well as annotated data sources such as semantic segmentations and depth reconstructions without needing any meta-knowledge beyond the pixels.  
-            Once this wide variety of visual data (420 billion tokens) is represented as sequences, the model can be trained to minimize cross-entropy loss for next token prediction. 
+            We introduce a novel sequential modeling approach which enables learning a Large Vision Model (<b>LVM</b>) without making use of any linguistic data. <br>
+            To do this, we define a common format, "visual sentences", in which we can represent raw images and videos as well as annotated data sources such as semantic segmentations and depth reconstructions without needing any meta-knowledge beyond the pixels.<br>
+            Once this wide variety of visual data (420 billion tokens) is represented as sequences, the model can be trained to minimize cross-entropy loss for next token prediction. <br>
             By training across various scales of model architecture and data diversity, we provide empirical evidence that our models scale effectively. 
-            Many different vision tasks can be solved by designing suitable prompts at test time.
+            Many different vision tasks can be solved by designing suitable prompts at test time.<br><br><br><br>
           </p>
         </div>
       </div>
@@ -141,13 +142,146 @@
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Visual Sentences</h2>
+        <h2 class="title is-3" style="white-space: nowrap;">Visual Sentences Enable Unified Visual Data Format.</h2>
         <div class="content has-text-justified">
-          <!-- <embed src="images/visual_sentences.pdf" type="application/pdf" width="600" height="500"> -->
-          <img src="images/visual_sentences.png" alt="Description of the image">
+          <img src="static/images/figure1_final.jpg" alt="Visual Sentences">
+          <p class="caption"><b>Figure 1. Visual Sentence</b> allow us to format diverse vision data into the unified structure of image sequences.</p>
+        </div>
+        <br><br>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">LVM Shows Scalability Across Model and Data Size.</h2>
+        <div class="content has-text-justified">
+          <div style="text-align: center;">
+            <img src="static/images/training_loss_plot.jpg" alt="Scalability Part 1" width="400" height="400">
+            <!-- <p class="caption"><b>Figure 2. Training loss for the 300M, 600M, 1B, and 3B models.</b> All models are trained on 420B tokens, which correspond to 1.64B images. The training scales well with model sizes.</p> -->
+            <p class="caption" style="width: 100%; text-align: center;"><b>Figure 2. Training loss for the 300M, 600M, 1B, and 3B models.</b> All models are trained on 420B tokens, which correspond to 1.64B images. The training scales well with model sizes.</p>
+
+            <!-- <p class="total-caption" style="width: 100%; text-align: center;"><b>Total Caption:</b> ThisThisThisThisThisThisThisThisThisThis is the total caption for all four images.</p> -->
+
+          </div>
+
+
+          <style>
+  
+          
+          .image-container {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between; 
+          }
+
+          .image {
+            flex: 1; 
+            margin: 10px;
+            max-width: calc(25% - 20px); 
+          }
+
+          .image img {
+            width: 150%; 
+            height: auto;
+          }
+
+          .caption {
+        width: 80%; /* Adjust the width as needed */
+        margin: 10px auto; /* Centers the caption and adds space above */
+        text-align: center;
+    }
+          </style>
+      
+
+        </div>
+
+        <!-- <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3"></h2>
+            <div class="content has-text-justified"> -->
+              <div class="image-container">
+                <div class="image">
+                  <img src="static/images/semantic_segmentation_plot.jpg" alt="Image 1">
+                </div>
+                <div class="image">
+                  <img src="static/images/depth_estimation_plot.jpg" alt="Image 2">
+                </div>
+                <div class="image">
+                  <img src="static/images/Surface_Normal_plot.jpg" alt="Image 3">
+                </div>
+                <div class="image">
+                  <img src="static/images/Edge_Detection_plot.jpg" alt="Image 4">
+
+                </div>
+
+              </div>
+              <p class="caption" style="width: 100%; text-align: center;"><b>Figure 3. Larger LVMs perform better on downstream tasks.</b> We evaluate LVMs of varying sizes on 4 different downstream tasks, following the 5 shot setting on the ImageNet validation set and report the perplexity. We find that perplexity decreases with larger models across all tasks, indicating the strong scalability.</p>
+              <br><br>
+            <!-- </div>
+
+          </div> -->
+        <!-- </div> -->
+
+        <div style="text-align: center;">
+          <img src="static/images/dataset_ablation.jpg" alt="Scalability Part 1" >
+          <p class="caption" style="width: 100%; text-align: center;">Figure 4. We evaluate the perplexity of 4 models trained on different sub-components of our datasets on tasks using the ImageNet validation set. All models are 3B parameters and all evaluations are conducted in the 5-shot setting. We can see that the model benefits from each single images, videos and annotations, demonstrating the importance of our training dataset diversity.</p>
+
+          <!-- <p class="caption"><b>Figure 2. Training loss for the 300M, 600M, 1B, and 3B models.</b> All models are trained on 420B tokens, which correspond to 1.64B images. The training scales well with model sizes.</p> -->
+          <!-- <p class="total-caption" style="width: 100%; text-align: center;"><b>Total Caption:</b> ThisThisThisThisThisThisThisThisThisThis is the total caption for all four images.</p> -->
+
         </div>
       </div>
     </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="white-space: nowrap;">Results, everything in prompts.</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/videos.jpg" alt="Visual Sentences">
+          <p class="caption" style="width: 100%; text-align: center;"><b>Frame predictions.</b> LVM predicts the next frame (marked in red) given previous video frames as prompt. The results reveal the LVM can predict the video frames while considering dynamic objects and camera motion.</p>
+
+          <img src="static/images/complex_task_2.jpg" alt="Visual Sentences"> 
+          <p class="caption" style="width: 100%; text-align: center;"><b>In and out of distribution prompting examples.</b> Every row is a prompt that contains a sequence of images interleaved with annotations, followed by a query. The last image is predicted by the model (marked in red). The last 5 rows show examples where the query image is out of distribution (painting, sketch, etc) for the task it was trained for. </p>
+
+          <img src="static/images/complex_task_3.jpg" alt="Visual Sentences"> 
+          <p class="caption" style="width: 100%; text-align: center;"><b>Compositing & novel tasks.</b> compositing
+            several tasks together within a single prompt. Here, we
+            demonstrate the rotation task together with the novel key-
+            point correspondence task and request the model to continue
+            the pattern. </p>
+
+
+
+        </div>
+        <br><br>
+        <h2 class="title is-3" style="white-space: nowrap;">Miscellaneous Prompts. Guess what's next?</h2>
+
+            <div class="content has-text-justified">
+
+              
+             <div style="text-align: center;"> 
+              <img src="static/images/Guess_2.jpg" alt="Visual Sentences" width="500" height="500"> 
+              <p class="caption" style="width: 100%; text-align: center;"><b>Tasks that are not always easily describable in language</b> </p>
+              <br>
+            
+            </div>
+
+    
+              <img src="static/images/raven_2.jpg" alt="Visual Sentences"> 
+              <p class="caption" style="width: 100%; text-align: center;"><b>Non-verbal IQ tests.</b></p>
+              <br>
+              <div style="text-align: center;">
+                <img src="static/images/misc.jpg" alt="Visual Sentences" width="500" height="500">
+                <p class="caption" style="width: 100%; text-align: center;">A variety of simple vision
+                  tasks, such as object replication (top), relighting (middle), and
+                  zooming in (bottom), can be simply specified via a suitably chosen
+                  visual sentence prompt that expresses the task to the LVM</p>
+            </div>
+
+      </div>
+
+
+    </div>
+
   </div>
 </section>
 
