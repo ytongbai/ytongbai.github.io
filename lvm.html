@@ -25,6 +25,30 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      function copyBibtex() {
+        const bibtex = `@inproceedings{bai2024sequential,
+          title={Sequential modeling enables scalable learning for large vision models},
+          author={Bai, Yutong and Geng, Xinyang and Mangalam, Karttikeya and Bar, Amir and Yuille, Alan L and Darrell, Trevor and Malik, Jitendra and Efros, Alexei A},
+          booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+          pages={22861--22872},
+          year={2024}
+        }`;
+        navigator.clipboard.writeText(bibtex).then(function() {
+          alert('BibTeX copied to clipboard!');
+        }, function() {
+          alert('Failed to copy BibTeX.');
+        });
+      }
+    
+      // Ensure the function is globally accessible
+      window.copyBibtex = copyBibtex;
+    });
+    </script>
+    
+
 </head>
 <body>
 
@@ -75,6 +99,11 @@
             <span class="author-block"><sup>2</sup>Johns Hopkins University</span>
           </div>
 
+          <div class="is-size-5 has-text-centered">
+            <span class="publication-cvpr"><strong>CVPR 2024</strong></span>
+          </div>
+
+
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
@@ -107,7 +136,21 @@
                   </span>
                   <span>Data</span>
                   </a>
+
+            <!-- BibTeX Link. -->
+            <span class="link-block">
+              <a href="#"
+                 onclick="copyBibtex()"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file-alt"></i>
+                </span>
+                <span>BibTeX</span>
+              </a>
+            </span>
             </div>
+
+
 
           </div>
         </div>
