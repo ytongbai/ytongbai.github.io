@@ -66,9 +66,9 @@
 }
 
 body, td, th, tr, p, a, strong, papertitle, button, input, select, textarea {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 16px !important;
-  font-weight: 570 !important;
+  font-weight: 400 !important;
   color: #282828;
 }
 
@@ -99,7 +99,7 @@ a:hover {
 
 button, .btn {
   font-size: 16px;
-  font-weight: 570 !important;
+  font-weight: 400 !important;
   color: #282828;
   background: #fff;
   border: 1px solid #ccc;
@@ -149,7 +149,7 @@ span.highlight {
   cursor: pointer;
   font-family: inherit;
   font-size: 16px;
-  font-weight: 570 !important;
+  font-weight: 400 !important;
   transition: all 0.2s ease-in-out;
 }
 
@@ -184,7 +184,7 @@ span.highlight {
 }
 
 papertitle, a papertitle {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 16px !important;
   font-weight: bold !important;
   color: #282828 !important;
@@ -200,7 +200,7 @@ papertitle, a papertitle {
 .pub-filter-link {
   color: #394FC1;
   cursor: pointer;
-  font-weight: 570 !important;
+  font-weight: 400 !important;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -235,6 +235,7 @@ td > p:first-of-type a {
 #publications-table .tdimg,
 #publications-table .tdcontent {
   vertical-align: top !important;
+  padding: 30px 20px !important;
 }
 
 #publications-table .tdimg img,
@@ -247,12 +248,12 @@ td > p:first-of-type a {
 
 #publications-table .author-name {
   color: #394FC1 !important;
-  font-weight: 570 !important;
+  font-weight: 400 !important;
 }
 
 /* Ensure author links are not bold */
 #publications-table .author-name a {
-  font-weight: 570 !important;
+  font-weight: 400 !important;
 }
 #publications-table .yutong-bai {
   color: #394FC1 !important;
