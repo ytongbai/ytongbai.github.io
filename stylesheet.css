@@ -301,9 +301,11 @@ em {
 }
 
 /* News toggle hover effect */
+#news-toggle {
+  padding: 2px 4px;
+}
 #news-toggle:hover {
   background-color: #F2E8D8 !important;
   transition: all 0.2s ease-in-out;
   border-radius: 4px;
-  padding: 2px 4px;
 }
