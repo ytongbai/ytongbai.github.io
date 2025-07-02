@@ -309,3 +309,79 @@ em {
   transition: all 0.2s ease-in-out;
   border-radius: 4px;
 }
+
+@media (max-width: 600px) {
+  body, td, th, tr, p, a, strong, papertitle, button, input, select, textarea {
+    font-size: 13px !important;
+  }
+  heading, h2 {
+    font-size: 16px !important;
+  }
+  name, h1 {
+    font-size: 20px !important;
+  }
+  #publications-table,
+  #publications-table .tdimg,
+  #publications-table .tdcontent,
+  #publications-table .paper,
+  #publications-table papertitle,
+  #publications-table .author-name,
+  #publications-table .pub-filter-menu,
+  #publications-table .pub-filter-link {
+    font-size: 12px !important;
+  }
+  #publications-table papertitle {
+    font-size: 13px !important;
+  }
+  #publications-table .author-name {
+    font-size: 12px !important;
+  }
+  .pub-filter-menu,
+  .pub-filter-link {
+    font-size: 12px !important;
+  }
+  /* div[style*="font-size:20px"][style*="font-weight:bold"] {
+    font-size: 15px !important;
+  } */
+}
+
+@media (max-width: 760px) {
+  .profile-table {
+    width: 100% !important;
+    display: block;
+  }
+  .profile-row {
+    display: block;
+    width: 100%;
+  }
+  .profile-name-cell {
+    display: block;
+    width: 100%;
+    padding-bottom: 8px !important;
+  }
+  .profile-photo-cell, .profile-info-cell {
+    display: block;
+    width: 100% !important;
+    vertical-align: top !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .profile-photo-cell {
+    text-align: left !important;
+    padding-bottom: 8px !important;
+  }
+  .profile-name {
+    text-align: left !important;
+    margin-bottom: 0 !important;
+  }
+  name {
+    display: block;
+    text-align: left;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    font-size: 22px !important;
+  }
+  td[style*="vertical-align:middle"] name {
+    margin-top: 0 !important;
+  }
+}

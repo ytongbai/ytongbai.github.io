@@ -13,14 +13,20 @@ td > img {
 
 @media (max-width:760px) {
     td > img {
-        display: none;
+        display: block;
     }
     .tdimg {
-        display: none;
-        width: 0%;
-        padding: 0;
+        display: table-cell;
+        width: 26%;
+        padding: 20px;
     }
     .tdcontent {
-        width: 100%;
+        width: 74%;
     }
+}
+
+@media (max-width: 600px) {
+  .tdcontent, .tdimg, .paper {
+    font-size: 13px !important;
+  }
 }
