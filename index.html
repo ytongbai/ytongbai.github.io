@@ -21,33 +21,69 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="icon" type="image/png" href="images/JHU_icon.jpg">
+  <style>
+    body,
+    td,
+    th,
+    tr,
+    p,
+    a {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #282828;
+    }
+
+    papertitle {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+      font-size: 16px !important;
+      font-weight: bold !important;
+      color: #337ab7 !important;
+    }
+
+    .pub-filter-menu {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #282828;
+      font-family: inherit;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    heading {
+      display: block;
+      margin-bottom: 6px;
+      margin-left: 0;
+      padding-left: 0;
+    }
+  </style>
 </head>
 
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <table style="width:100%;max-width:950px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr style="padding:0px">
+            <td style="padding:1%;width:20%;vertical-align:top">
+              <a href="images/yutong.png"><img style="width:100%;max-width:100%" alt="profile photo" src="images/yutong.png" class="hoverZoomLink"></a>
+            </td>
             <td style="padding:2.5%;width:80%;vertical-align:middle">
-              <p style="text-align:center">
+              <p style="text-align:left">
                 <name>Yutong Bai</name>
               </p>
-                Yutong is currently a Postdoc Researcher at UC Berkeley, advised by <a href="http://people.eecs.berkeley.edu/~efros/">Prof. Alyosha Efros</a>,  <a href="https://people.eecs.berkeley.edu/~malik/">Prof. Jitendra Malik</a> and  <a href="https://people.eecs.berkeley.edu/~trevor/">Prof. Trevor Darrell</a>. 
+                <p>Yutong is currently a Postdoc Researcher at UC Berkeley (<a href="https://bair.berkeley.edu/">BAIR</a>), advised by Prof. <a href="http://people.eecs.berkeley.edu/~efros/"> Alexei (Alyosha) Efros</a>,  Prof.<a href="https://people.eecs.berkeley.edu/~malik/"> Jitendra Malik</a> and Prof. <a href="https://people.eecs.berkeley.edu/~trevor/"> Trevor Darrell</a>. 
                 
-                Prior to that, she obtained CS PhD degree at Johns Hopkins University advised by <a href="https://www.cs.jhu.edu/~ayuille/">Prof. Alan Yuille</a>.
+                Prior to that, she obtained CS PhD degree at Johns Hopkins University advised by Prof.<a href="https://www.cs.jhu.edu/~ayuille/"> Alan Yuille</a>.</p>
 
-                <p>She used to intern at Meta AI (FAIR Labs) and Google Brain, and is selected as 2023 <a href="https://machinelearning.apple.com/updates/apple-scholars-aiml-2023">Apple Scholar</a> and EECS Rising Star.</p>
+                <p>She used to intern at Meta AI (FAIR Labs) and Google Brain, and is selected as 2023 <a href="https://machinelearning.apple.com/updates/apple-scholars-aiml-2023">Apple Scholar</a> and <a href="https://eecs.mit.edu/rising-stars/">MIT EECS Rising Star</a>.</p>
 
-              <p style="text-align:center">
+              <p style="text-align:left">
                 <a href="mailto:ytongbai@gmail.com">Email</a> &nbsp/&nbsp
                 <a href="https://scholar.google.com/citations?user=N1-l4GsAAAAJ&hl=en&oi=ao">Google Scholar</a> &nbsp/&nbsp
                 <a href="https://twitter.com/YutongBAI1002">Twitter</a> &nbsp/&nbsp
                 <a href="https://github.com/ytongbai">Github</a> &nbsp
               </p>
-            </td>
-            <td style="padding:1%;width:100%;max-width:100%">
-              <a href="images/yutong.png"><img style="width:100%;max-width:100%" alt="profile photo" src="images/yutong.png" class="hoverZoomLink"></a>
             </td>
           </tr>
         </tbody></table>
@@ -57,11 +93,25 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading><font color="black">News</font></heading>
-              <ul>
-                <li>Looking for strong graduate/undergraduate students to collaborate. Please reach out if you are interested.</b></li> 
-                <!-- <li>Currently on the job market! </li> -->
-              </ul>
+              <div style="font-size:20px;font-weight:bold;display:inline;">News</div>
+              <div class="news-toggle-menu" style="display:inline; margin-left: 10px;">
+                (
+                  <span id="news-toggle" onclick="toggleNews()" style="color: #394FC1; cursor: pointer; font-weight: 570;">▼ Expand</span>
+                )
+              </div>
+            </td>
+          </tr>
+        </tbody></table>
+
+        <table id="news-table" class="hidden" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <div id="news-content" class="news-content">
+                <ul>
+                  <li>Looking for strong graduate/undergraduate students to collaborate. Please reach out if you are interested.</b></li> 
+                  <!-- <li>Currently on the job market! </li> -->
+                </ul>
+              </div>
             </td>
           </tr>
           </tbody></table>
@@ -74,8 +124,7 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Research</heading>
               <p>
-                Her research aims to build up the AI system with less supervision and strong robustness. Explorations include representation learning, self-supervised learning, and generative modeling. 
-                Representative papers are <span class="highlight">highlighted</span>.
+                Her research aims to build up the AI system with less supervision and strong robustness. Explorations include representation learning, self-supervised learning, and generative modeling.
               </p>
             </td>
           </tr>
@@ -83,25 +132,39 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
-            <td class="tdimg" style="padding:20px;width:35%;vertical-align:center">
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <div style="font-size:20px;font-weight:bold;display:inline;">Publications</div>
+              <div class="pub-filter-menu" style="display:inline; margin-left: 10px;">
+                (
+                  <span class="pub-filter-link active" data-filter="selected" onclick="filterPublications('selected')">show selected</span> /
+                  <span class="pub-filter-link" data-filter="all-date" onclick="filterPublications('all-date')">show all by date</span> /
+                  <span class="pub-filter-link" data-filter="all-topic" onclick="filterPublications('all-topic')">show all by topic</span>
+                )
+              </div>
+            </td>
+          </tr>
+        </tbody></table>
+
+        <table id="publications-table" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
               <video width="100%" controls poster="">
                 <source src="images/peva.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </td>
-            <td class="tdcontent" style="padding:20px;width:65%;vertical-align:center" bgcolor="#ffffd0">
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
               <p>
                 <a href="http://arxiv.org/abs/2506.21552">
                   <papertitle>Whole-Body Conditioned Egocentric Video Prediction</papertitle>
                 </a>
                 <br>
-                <strong>Yutong Bai*</strong>, Danny Tran*, Amir Bar*, <br>
-                Yann LeCun<span style="font-size: 0.8em;">†</span>, Trevor Darrell<span style="font-size: 0.8em;">†</span>, Jitendra Malik<span style="font-size: 0.8em;">†</span>
+                <span class="author-name yutong-bai">Yutong Bai</span>*, <span class="author-name">Danny Tran</span>*, <span class="author-name">Amir Bar</span>*, <span class="author-name"><a href="http://yann.lecun.com/">Yann LeCun</a></span><span style="font-size: 0.8em;">†</span>, <span class="author-name"><a href="https://people.eecs.berkeley.edu/~trevor/">Trevor Darrell</a></span><span style="font-size: 0.8em;">†</span>, <span class="author-name"><a href="https://people.eecs.berkeley.edu/~malik/">Jitendra Malik</a></span><span style="font-size: 0.8em;">†</span>
                 <br>
-                <em>Arxiv</em>
+                Tech Report, 2025
                 <br>
               </p>
-              <div class="paper" id="">
+              <div class="paper" id="peva">
                 <a href="http://arxiv.org/abs/2506.21552">paper</a> &nbsp;/&nbsp;
                 <a href="https://dannytran123.github.io/PEVA/">project page</a>
               </div>
@@ -111,21 +174,21 @@
           
 
           <tr>
-            <td class="tdimg" style="padding:20px;width:35%;vertical-align:center">
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
               <img src='static/images/visual_sentences.jpg'>
             </td>
-            <td class="tdcontent" style="padding:20px;width:65%;vertical-align:center", bgcolor="#ffffd0">
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
               <p>
                 <a href="https://arxiv.org/abs/2312.00785">
                   <papertitle>Sequential Modeling Enables Scalable Learning for Large Vision Models</papertitle>
                 </a>
                 <br>
-                <strong>Yutong Bai*</strong>, Xinyang Geng*, Karttikeya Mangalam, Amir Bar, Alan Yuille, Trevor Darrell, Jitendra Malik, Alexei A. Efros
+                <span class="author-name yutong-bai">Yutong Bai</span>*, <span class="author-name">Xinyang Geng</span>*, <span class="author-name">Karttikeya Mangalam</span>, <span class="author-name">Amir Bar</span>, <span class="author-name">Alan Yuille</span>, <span class="author-name"><a href="https://people.eecs.berkeley.edu/~trevor/">Trevor Darrell</a></span>, <span class="author-name"><a href="https://people.eecs.berkeley.edu/~malik/">Jitendra Malik</a></span>, <span class="author-name">Alexei A. Efros</span>
                 <br>
-                <em>CVPR 2024</em>
+                CVPR 2024
                 <br>
               </p>
-              <div class="paper" id="">
+              <div class="paper" id="lvm">
                 <a href="https://arxiv.org/abs/2312.00785">paper</a> &nbsp/&nbsp
                 <a href="https://yutongbai.com/lvm.html">Project Page</a> &nbsp/&nbsp
                 <a href="https://github.com/ytongbai/LVM">code & data</a>
@@ -135,42 +198,18 @@
           </tr>
 
           <tr>
-            <td class="tdimg" style="padding:20px;width:35%;vertical-align:center">
-              <img src='images/bai2022masked.png'>
-            </td>
-            <td class="tdcontent" style="padding:20px;width:65%;vertical-align:center">
-              <p>
-                <a href="https://arxiv.org/pdf/2208.12256.pdf">
-                  <papertitle>Masked Autoencoders Enable Efficient Knowledge Distillers</papertitle>
-                </a>
-                <br>
-                <strong>Yutong Bai</strong>, Zeyu Wang, Junfei Xiao, Chen Wei, Huiyu Wang, Alan Yuille, Yuyin Zhou, Cihang Xie
-                <br>
-                <em>CVPR</em>, 2023
-                <br>
-              </p>
-              <div class="paper" id="bai2022masked">
-                <a href="https://arxiv.org/pdf/2208.12256.pdf">paper</a> &nbsp/&nbsp
-                <a href="https://github.com/UCSC-VLAA/DMAE">code</a>
-              </div>
-
-            </td>
-          </tr>
-          
-
-          <tr>
-            <td class="tdimg" style="padding:20px;width:35%;vertical-align:center">
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
               <img src='images/bai2022point.png'>
             </td>
-            <td class="tdcontent" style="padding:20px;width:65%;vertical-align:center", bgcolor="#ffffd0">
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
               <p>
                 <a href="https://arxiv.org/pdf/2202.04639.pdf">
                   <papertitle>Point-Level Region Contrast for Object Detection Pre-Training</papertitle>
                 </a>
                 <br>
-                <strong>Yutong Bai</strong>, Xinlei Chen, Alexander Kirillov, Alan Yuille, Alexander C. Berg
+                <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Xinlei Chen</span>, <span class="author-name">Alexander Kirillov</span>, <span class="author-name"><a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a></span>, <span class="author-name">Alexander C. Berg</span>
                 <br>
-                <em>CVPR</em>, 2022 &nbsp <font color="red"><strong>(Oral Presentation, Best Paper Finalist - Top 0.4%)</strong></font>
+                CVPR, 2022 &nbsp <font color="red"><strong>(Nominated for CVPR Best Paper - Top 0.4%)</strong></font>
                 
                 <br>
               </p>
@@ -183,20 +222,139 @@
 
             </td>
           </tr>
+          
 
           <tr>
-            <td class="tdimg" style="padding:20px;width:35%;vertical-align:center">
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
+              <img src='images/tardis.jpg'>
+            </td>
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
+              <p>
+                <a href="https://arxiv.org/abs/2506.11302">
+                  <papertitle>TARDIS STRIDE: A Spatio-Temporal Road Image Dataset and World Model for Autonomy</papertitle>
+                </a>
+                <br>
+                <span class="author-name">Héctor Carrión</span>*, <span class="author-name yutong-bai">Yutong Bai</span>*, <span class="author-name">Víctor A. Hernández Castro</span>*, <span class="author-name">Kishan Panaganti</span>, <span class="author-name">Ayush Zenith</span>, <span class="author-name">Matthew Trang</span>, <span class="author-name">Tony Zhang</span>, <span class="author-name"><a href="https://www.eas.caltech.edu/people/perona">Pietro Perona</a></span>, <span class="author-name"><a href="https://people.eecs.berkeley.edu/~malik/">Jitendra Malik</a></span>
+                <br>
+                Tech Report, 2025
+                <br>
+              </p>
+              <div class="paper" id="tardis">
+                <a href="https://arxiv.org/abs/2506.11302">paper</a> &nbsp/&nbsp
+                <a href="https://www.tera-ai.com/blog/tardis">project page</a> &nbsp/&nbsp
+                <a href="https://huggingface.co/datasets/Tera-AI/STRIDE">data code and model</a>
+              </div>
+            </td>
+          </tr>
+          
+
+          <tr>
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
+              <img src='images/mochi.png'>
+            </td>
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
+              <p>
+                <a href="https://arxiv.org/abs/2409.05862">
+                  <papertitle>Evaluating Multiview Object Consistency in Humans and Image Models</papertitle>
+                </a>
+                <br>
+                <span class="author-name">Tyler Bonnen</span>, <span class="author-name">Stephanie Fu</span>, <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Thomas O'Connell</span>, <span class="author-name">Yoni Friedman</span>, <span class="author-name">Nancy Kanwisher</span>, <span class="author-name">Josh Tenenbaum</span>, <span class="author-name">Alexei Efros</span>
+                <br>
+                NeurIPS 2024
+                <br>
+              </p>
+              <div class="paper" id="mochi">
+                <a href="https://arxiv.org/abs/2409.05862">paper</a> &nbsp/&nbsp
+                <a href="https://tzler.github.io/MOCHI/">project page</a> &nbsp/&nbsp
+                <a href="https://github.com/tzler/mochi_code">code</a> &nbsp/&nbsp
+                <a href="https://huggingface.co/datasets/tzler/MOCHI">data</a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
+              <img src='images/kiva.png'>
+            </td>
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
+              <p>
+                <a href="https://arxiv.org/abs/2407.17773">
+                  <papertitle>KiVA: Kid-inspired Visual Analogies for Testing Large Multimodal Models</papertitle>
+                </a>
+                <br>
+                <span class="author-name">Eunice Yiu</span>, <span class="author-name">Maan Qraitem</span>, <span class="author-name">Anisa Noor Majhi</span>, <span class="author-name">Charlie Wong</span>, <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Shiry Ginosar</span>, <span class="author-name">Alison Gopnik</span>, <span class="author-name">Kate Saenko</span>
+                <br>
+                ICLR 2025
+                <br>
+              </p>
+              <div class="paper" id="kiva">
+                <a href="https://arxiv.org/abs/2407.17773">paper</a> &nbsp/&nbsp
+                <a href="https://ey242.github.io/kiva.github.io/">project page</a> &nbsp/&nbsp
+                <a href="https://github.com/ey242/KiVA">code</a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
+              <img src='images/bai2020can.png'>
+            </td>
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
+              <p>
+                <a href="https://arxiv.org/abs/2504.15145">
+                  <papertitle>"I Know It When I See It": Mood Spaces for Connecting and Expressing Visual Concepts</papertitle>
+                </a>
+                <br>
+                <span class="author-name">Huzheng Yang</span>, <span class="author-name">Katherine Xu</span>, <span class="author-name">Michael D Grossberg</span>, <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Jianbo Shi</span>
+                <br>
+                Tech Report, 2025
+                <br>
+              </p>
+              <div class="paper" id="mood">
+                <a href="https://arxiv.org/abs/2504.15145">paper</a> &nbsp/&nbsp
+                <a href="https://huzeyann.github.io/mspace/">project page</a> &nbsp/&nbsp
+                <a href="https://github.com/huzeyann/mood">code</a> &nbsp/&nbsp
+                <a href="https://huggingface.co/spaces/huzey/MoodSpace">demo</a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
+              <img src='images/bai2022masked.png'>
+            </td>
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
+              <p>
+                <a href="https://arxiv.org/pdf/2208.12256.pdf">
+                  <papertitle>Masked Autoencoders Enable Efficient Knowledge Distillers</papertitle>
+                </a>
+                <br>
+                <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Zeyu Wang</span>, <span class="author-name">Junfei Xiao</span>, <span class="author-name">Chen Wei</span>, <span class="author-name">Huiyu Wang</span>, <span class="author-name"><a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a></span>, <span class="author-name">Yuyin Zhou</span>, <span class="author-name">Cihang Xie</span>
+                <br>
+                CVPR, 2023
+                <br>
+              </p>
+              <div class="paper" id="bai2022masked">
+                <a href="https://arxiv.org/pdf/2208.12256.pdf">paper</a> &nbsp/&nbsp
+                <a href="https://github.com/UCSC-VLAA/DMAE">code</a>
+              </div>
+
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
               <img src='images/wang2022cnn.png'>
             </td>
-            <td class="tdcontent" style="padding:20px;width:65%;vertical-align:center">
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
               <p>
                 <a href="https://arxiv.org/pdf/2206.03452.pdf">
                   <papertitle>Can CNNs Be More Robust Than Transformers?</papertitle>
                 </a>
                 <br>
-                Zeyu Wang, <strong>Yutong Bai</strong>, Yuyin Zhou, Cihang Xie
+                <span class="author-name">Zeyu Wang</span>, <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Yuyin Zhou</span>, <span class="author-name">Cihang Xie</span>
                 <br>
-                <em>ICLR</em>, 2023
+                ICLR, 2023
                 <br>
               </p>
               <div class="paper" id="wang2022cnn">
@@ -207,18 +365,18 @@
           </tr>
           
           <tr>
-            <td class="tdimg" style="padding: 20px; width: 35%; vertical-align: center">
+            <td class="tdimg" style="padding: 20px; width: 26%; vertical-align: top">
               <img src="images/mei2022fastadvprop.png" />
             </td>
-            <td class="tdcontent" style="padding: 20px; width: 65%; vertical-align: center">
+            <td class="tdcontent" style="padding: 20px; width: 74%; vertical-align: top">
               <p>
                 <a href="https://openreview.net/pdf?id=hcoswsDHNAW">
                   <papertitle>Fast AdvProp</papertitle>
                 </a>
                 <br />
-                Jieru Mei, Yucheng Han, <strong>Yutong Bai</strong>, Yixiao Zhang, Yingwei Li, Xianhang Li, Alan Yuille, Cihang Xie
+                <span class="author-name">Jieru Mei</span>, <span class="author-name">Yucheng Han</span>, <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Yixiao Zhang</span>, <span class="author-name">Yingwei Li</span>, <span class="author-name">Xianhang Li</span>, <span class="author-name"><a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a></span>, <span class="author-name">Cihang Xie</span>
                 <br />
-                <em>ICLR</em>, 2022
+                ICLR, 2022
                 <br />
               </p>
               <div class="paper" id="mei2022fastadvprop">
@@ -232,18 +390,18 @@
 
 
           <tr>
-            <td class="tdimg" style="padding:20px;width:35%;vertical-align:center">
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
               <img src='images/2022hetrans.png'>
             </td>
-            <td class="tdcontent" style="padding:20px;width:65%;vertical-align:center">
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
               <p>
                 <a href="https://arxiv.org/pdf/2103.07976.pdf">
                   <papertitle>TransFG: A Transformer Architecture for Fine-grained Recognition</papertitle>
                 </a>
                 <br>
-                Ju He, Jie-Neng Chen, Shuai Liu, Adam Kortylewski, Cheng Yang, <strong>Yutong Bai</strong>, Changhu Wang
+                <span class="author-name">Ju He</span>, <span class="author-name">Jie-Neng Chen</span>, <span class="author-name">Shuai Liu</span>, <span class="author-name">Adam Kortylewski</span>, <span class="author-name">Cheng Yang</span>, <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Changhu Wang</span>
                 <br>
-                <em>AAAI</em>, 2022
+                AAAI, 2022
                 <br>
               </p>
               <div class="paper" id="2022hetrans">
@@ -259,18 +417,18 @@
 
 
           <tr>
-            <td class="tdimg" style="padding:20px;width:35%;vertical-align:center">
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
               <img src='images/bai2020vitsVScnns.png'>
             </td>
-            <td class="tdcontent" style="padding:20px;width:65%;vertical-align:center", bgcolor="#ffffd0">
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
               <p>
                 <a href="https://arxiv.org/pdf/2111.05464.pdf">
                   <papertitle>Are Transformers More Robust than CNNs?</papertitle>
                 </a>
                 <br>
-                <strong>Yutong Bai</strong>, Jieru Mei, Alan L Yuille, Cihang Xie
+                <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Jieru Mei</span>, <span class="author-name"><a href="https://www.cs.jhu.edu/~ayuille/">Alan L Yuille</a></span>, <span class="author-name">Cihang Xie</span>
                 <br>
-                <em>NeurIPS</em>, 2021
+                NeurIPS, 2021
                 <br>
               </p>
               <div class="paper" id="bai2020vitsVScnns">
@@ -284,18 +442,18 @@
 
 
           <tr>
-            <td class="tdimg" style="padding:20px;width:35%;vertical-align:center">
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
               <img src='images/yu2021glance.png'>
             </td>
-            <td class="tdcontent" style="padding:20px;width:65%;vertical-align:center">
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
               <p>
                 <a href="https://arxiv.org/pdf/2106.02277.pdf">
                   <papertitle>Glance-and-Gaze Vision Transformer</papertitle>
                 </a>
                 <br>
-                Qihang Yu, Yingda Xia, <strong>Yutong Bai</strong>, Yongyi Lu, Alan L Yuille, Wei Shen
+                <span class="author-name">Qihang Yu</span>, <span class="author-name">Yingda Xia</span>, <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Yongyi Lu</span>, <span class="author-name"><a href="https://www.cs.jhu.edu/~ayuille/">Alan L Yuille</a></span>, <span class="author-name">Wei Shen</span>
                 <br>
-                <em>NeurIPS</em>, 2021
+                NeurIPS, 2021
                 <br>
               </p>
               <div class="paper" id="yu2021glance">
@@ -306,18 +464,18 @@
           </tr>
 
           <tr>
-            <td class="tdimg" style="padding:20px;width:35%;vertical-align:center">
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
               <img src='images/yu2020mask.png'>
             </td>
-            <td class="tdcontent" style="padding:20px;width:65%;vertical-align:center">
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
               <p>
                 <a href="https://arxiv.org/pdf/2012.06722.pdf">
                   <papertitle>Mask Guided Matting via Progressive Refinement Network</papertitle>
                 </a>
                 <br>
-                Qihang Yu, Jianming Zhang, He Zhang, Yilin Wang, Zhe Lin, Ning Xu, <strong>Yutong Bai</strong>, Alan Yuille
+                <span class="author-name">Qihang Yu</span>, <span class="author-name">Jianming Zhang</span>, <span class="author-name">He Zhang</span>, <span class="author-name">Yilin Wang</span>, <span class="author-name">Zhe Lin</span>, <span class="author-name">Ning Xu</span>, <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name"><a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a></span>
                 <br>
-                <em>CVPR</em>, 2021
+                CVPR, 2021
                 <br>
               </p>
               <div class="paper" id="yu2020mask">
@@ -328,26 +486,26 @@
           </tr>
 
           <tr>
-            <td class="tdimg" style="padding:20px;width:35%;vertical-align:center">
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
               <img src='images/bai2020can.png'>
             </td>
-            <td class="tdcontent" style="padding:20px;width:65%;vertical-align:center", bgcolor="#ffffd0">
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
               <p>
                 <a href="https://arxiv.org/pdf/2011.13046.pdf">
                   <papertitle>Can Temporal Information Help with Contrastive Self-Supervised Learning?</papertitle>
                 </a>
                 <br>
-                <strong>Yutong Bai</strong>
-                Haoqi Fan,
-                Ishan Misra,
-                Ganesh Venkatesh,
-                Yongyi Lu,
-                Yuyin Zhou,
-                Qihang Yu
-                Vikas Chandra,
-                Alan Yuille
+                <span class="author-name yutong-bai">Yutong Bai</span>,
+                <span class="author-name">Haoqi Fan</span>,
+                <span class="author-name">Ishan Misra</span>,
+                <span class="author-name">Ganesh Venkatesh</span>,
+                <span class="author-name">Yongyi Lu</span>,
+                <span class="author-name">Yuyin Zhou</span>,
+                <span class="author-name">Qihang Yu</span>,
+                <span class="author-name">Vikas Chandra</span>,
+                <span class="author-name"><a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a></span>
                 <br>
-                <em>Tech report</em>, arXiv
+                Tech report, arXiv
                 <br>
               </p>
               <div class="paper" id="bai2020can">
@@ -358,24 +516,24 @@
 
 
           <tr>
-            <td class="tdimg" style="padding:20px;width:35%;vertical-align:center">
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
                 <img src='images/yu2019c2fnas.png'>
             </td>
-            <td class="tdcontent" style="padding:20px;width:65%;vertical-align:center">
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
               <p>
                 <a href="https://arxiv.org/pdf/1912.09628.pdf">
                   <papertitle>C2FNAS: Coarse-to-Fine Neural Architecture Search for 3D Medical Image Segmentation</papertitle>
                 </a>
                 <br>
-                Qihang Yu,
-                Dong Yang,
-                Holger Roth,
-                <strong>Yutong Bai,</strong>
-                Yixiao Zhang,
-                Alan Yuille,
-                Daguang Xu
+                <span class="author-name">Qihang Yu</span>,
+                <span class="author-name">Dong Yang</span>,
+                <span class="author-name">Holger Roth</span>,
+                <span class="author-name yutong-bai">Yutong Bai</span>,
+                <span class="author-name">Yixiao Zhang</span>,
+                <span class="author-name"><a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a></span>,
+                <span class="author-name">Daguang Xu</span>
                 <br>
-                <em>CVPR</em>, 2020
+                CVPR, 2020
                 <br>
               </p>
               <div class="paper" id="yu2019c2fnas">
@@ -386,18 +544,18 @@
 
 
           <tr>
-            <td class="tdimg" style="padding:20px;width:35%;vertical-align:center">
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
               <img src='images/bai2019sp.png'>
             </td>
-            <td class="tdcontent" style="padding:20px;width:65%;vertical-align:center", bgcolor="#ffffd0">
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
               <p>
                 <a href="https://arxiv.org/pdf/1811.11823.pdf">
                   <papertitle>Semantic Part Detection via Matching: Learning to Generalize to Novel Viewpoints from Limited Training Data</papertitle>
                 </a>
                 <br>
-                <strong>Yutong Bai</strong>, Qing Liu, Lingxi Xie, Weichao Qiu, Yan Zheng, Alan Yuille
+                <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Qing Liu</span>, <span class="author-name">Lingxi Xie</span>, <span class="author-name">Weichao Qiu</span>, <span class="author-name">Yan Zheng</span>, <span class="author-name"><a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a></span>
                 <br>
-                <em>ICCV</em>, 2019
+                ICCV, 2019
                 <br>
               </p>
               <div class="paper" id="bai2019sp">
@@ -410,18 +568,18 @@
 
 
           <tr>
-            <td class="tdimg" style="padding:20px;width:35%;vertical-align:center">
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
               <img src='images/liu2019clevr.png'>
             </td>
-            <td class="tdcontent" style="padding:20px;width:65%;vertical-align:center", bgcolor="#ffffd0">
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
               <p>
                 <a href="https://arxiv.org/pdf/1901.00850.pdf">
                   <papertitle>Clevr-ref+: Diagnosing Visual Reasoning with Referring Expressions</papertitle>
                 </a>
                 <br>
-                Runtao Liu, Chenxi Liu, <strong>Yutong Bai</strong>, Alan L Yuille
+                <span class="author-name">Runtao Liu</span>, <span class="author-name">Chenxi Liu</span>, <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name"><a href="https://www.cs.jhu.edu/~ayuille/">Alan L Yuille</a></span>
                 <br>
-                <em>CVPR</em>, 2019
+                CVPR, 2019
                 <br>
               </p>
               <div class="paper" id="liu2019clevr">
@@ -432,18 +590,18 @@
           </tr>
 
           <tr>
-            <td class="tdimg" style="padding:20px;width:35%;vertical-align:center">
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
               <img src='images/bai2023coke.png'>
             </td>
-            <td class="tdcontent" style="padding:20px;width:65%;vertical-align:center", bgcolor="#ffffd0">
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
               <p>
                 <a href="https://arxiv.org/pdf/2009.14115.pdf">
                   <papertitle>CoKe: Contrastive Learning for Robust Keypoint Detection</papertitle>
                 </a>
                 <br>
-                <strong>Yutong Bai</strong>, Angtian Wang, Adam Kortylewski, Alan Yuille
+                <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Angtian Wang</span>, <span class="author-name">Adam Kortylewski</span>, <span class="author-name"><a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a></span>
                 <br>
-                <em>WACV</em>, 2023
+                WACV, 2023
                 <br>
               </p>
               <div class="paper" id="bai2023coke">
@@ -454,18 +612,18 @@
 
 
           <tr>
-            <td class="tdimg" style="padding:20px;width:35%;vertical-align:center">
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
               <img src='images/xiao2023mae.png'>
             </td>
-            <td class="tdcontent" style="padding:20px;width:65%;vertical-align:center">
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
               <p>
                 <a href="https://openaccess.thecvf.com/content/WACV2023/papers/Xiao_Delving_Into_Masked_Autoencoders_for_Multi-Label_Thorax_Disease_Classification_WACV_2023_paper.pdf">
                   <papertitle>Delving Into Masked Autoencoders for Multi-Label Thorax Disease Classification</papertitle>
                 </a>
                 <br>
-                Junfei Xiao, <strong>Yutong Bai</strong>, Alan Yuille, Zongwei Zhou
+                <span class="author-name">Junfei Xiao</span>, <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name"><a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a></span>, <span class="author-name">Zongwei Zhou</span>
                 <br>
-                <em>WACV</em>, 2023
+                WACV, 2023
                 <br>
               </p>
               <div class="paper" id="xiao2023mae">
@@ -478,20 +636,335 @@
     
         </tbody></table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:right;">Stolen from <a href="https://jonbarron.info/">Jon Barron</a>. Big thanks!</p>
-            </td>
-          </tr>
-        </tbody></table>
       </td>
     </tr>
   </table>
 
 <script xml:space="preserve" language="JavaScript">
 hideallbibs();
+</script>
+
+<!-- Publications Filter JavaScript -->
+<script>
+// Publication data with categories and dates
+const publications = [
+  {
+    id: 'peva',
+    title: 'Whole-Body Conditioned Egocentric Video Prediction',
+    year: 2025,
+    venue: 'Tech Report',
+    topics: ['video-prediction', 'egocentric', 'generative'],
+    selected: true
+  },
+  {
+    id: 'lvm',
+    title: 'Sequential Modeling Enables Scalable Learning for Large Vision Models',
+    year: 2024,
+    venue: 'CVPR',
+    topics: ['large-vision-models', 'sequential-modeling', 'scalable-learning'],
+    selected: true
+  },
+  {
+    id: 'tardis',
+    title: 'TARDIS STRIDE: A Spatio-Temporal Road Image Dataset and World Model for Autonomy',
+    year: 2025,
+    venue: 'Tech Report',
+    topics: ['autonomous-driving', 'dataset', 'world-model'],
+    selected: true
+  },
+  {
+    id: 'mochi',
+    title: 'Evaluating Multiview Object Consistency in Humans and Image Models',
+    year: 2024,
+    venue: 'NeurIPS',
+    topics: ['multiview-consistency', 'human-vision', 'image-models'],
+    selected: true
+  },
+  {
+    id: 'kiva',
+    title: 'KiVA: Kid-inspired Visual Analogies for Testing Large Multimodal Models',
+    year: 2025,
+    venue: 'ICLR',
+    topics: ['visual-analogies', 'multimodal-models', 'evaluation'],
+    selected: true
+  },
+  {
+    id: 'mood',
+    title: '"I Know It When I See It": Mood Spaces for Connecting and Expressing Visual Concepts',
+    year: 2025,
+    venue: 'Tech Report',
+    topics: ['visual-concepts', 'mood-spaces', 'expression'],
+    selected: true
+  },
+  {
+    id: 'bai2022masked',
+    title: 'Masked Autoencoders Enable Efficient Knowledge Distillers',
+    year: 2023,
+    venue: 'CVPR',
+    topics: ['masked-autoencoders', 'knowledge-distillation', 'efficient-learning'],
+    selected: true
+  },
+  {
+    id: 'bai2022point',
+    title: 'Point-Level Region Contrast for Object Detection Pre-Training',
+    year: 2022,
+    venue: 'CVPR',
+    topics: ['object-detection', 'contrastive-learning', 'pre-training'],
+    selected: true
+  },
+  {
+    id: 'wang2022cnn',
+    title: 'Can CNNs Be More Robust Than Transformers?',
+    year: 2023,
+    venue: 'ICLR',
+    topics: ['robustness', 'cnn', 'transformer', 'comparison'],
+    selected: false
+  },
+  {
+    id: 'mei2022fastadvprop',
+    title: 'Fast AdvProp',
+    year: 2022,
+    venue: 'ICLR',
+    topics: ['adversarial-training', 'efficiency'],
+    selected: false
+  },
+  {
+    id: '2022hetrans',
+    title: 'TransFG: A Transformer Architecture for Fine-grained Recognition',
+    year: 2022,
+    venue: 'AAAI',
+    topics: ['transformer', 'fine-grained-recognition'],
+    selected: false
+  },
+  {
+    id: 'bai2020vitsVScnns',
+    title: 'Are Transformers More Robust than CNNs?',
+    year: 2021,
+    venue: 'NeurIPS',
+    topics: ['robustness', 'transformer', 'cnn', 'comparison'],
+    selected: true
+  },
+  {
+    id: 'yu2021glance',
+    title: 'Glance-and-Gaze Vision Transformer',
+    year: 2021,
+    venue: 'NeurIPS',
+    topics: ['vision-transformer', 'attention-mechanism'],
+    selected: false
+  },
+  {
+    id: 'yu2020mask',
+    title: 'Mask Guided Matting via Progressive Refinement Network',
+    year: 2021,
+    venue: 'CVPR',
+    topics: ['image-matting', 'progressive-refinement'],
+    selected: false
+  },
+  {
+    id: 'bai2020can',
+    title: 'Can Temporal Information Help with Contrastive Self-Supervised Learning?',
+    year: 2020,
+    venue: 'Tech report',
+    topics: ['contrastive-learning', 'temporal-information', 'self-supervised'],
+    selected: true
+  },
+  {
+    id: 'yu2019c2fnas',
+    title: 'C2FNAS: Coarse-to-Fine Neural Architecture Search for 3D Medical Image Segmentation',
+    year: 2020,
+    venue: 'CVPR',
+    topics: ['neural-architecture-search', 'medical-imaging', '3d-segmentation'],
+    selected: false
+  },
+  {
+    id: 'bai2019sp',
+    title: 'Semantic Part Detection via Matching: Learning to Generalize to Novel Viewpoints from Limited Training Data',
+    year: 2019,
+    venue: 'ICCV',
+    topics: ['semantic-part-detection', 'viewpoint-generalization', 'few-shot-learning'],
+    selected: true
+  },
+  {
+    id: 'liu2019clevr',
+    title: 'Clevr-ref+: Diagnosing Visual Reasoning with Referring Expressions',
+    year: 2019,
+    venue: 'CVPR',
+    topics: ['visual-reasoning', 'referring-expressions', 'diagnostics'],
+    selected: true
+  },
+  {
+    id: 'bai2023coke',
+    title: 'CoKe: Contrastive Learning for Robust Keypoint Detection',
+    year: 2023,
+    venue: 'WACV',
+    topics: ['keypoint-detection', 'contrastive-learning', 'robustness'],
+    selected: false
+  },
+  {
+    id: 'xiao2023mae',
+    title: 'Delving Into Masked Autoencoders for Multi-Label Thorax Disease Classification',
+    year: 2023,
+    venue: 'WACV',
+    topics: ['masked-autoencoders', 'medical-imaging', 'multi-label-classification'],
+    selected: false
+  }
+];
+
+function filterPublications(filterType) {
+  // Update button states
+  document.querySelectorAll('.pub-filter-link').forEach(btn => btn.classList.remove('active'));
+  document.querySelector(`.pub-filter-link[data-filter="${filterType}"]`).classList.add('active');
+  
+  // Get all publication rows
+  const publicationRows = document.querySelectorAll('#publications-table tr');
+  
+  publicationRows.forEach(row => {
+    // Skip header rows and non-publication rows
+    if (!row.querySelector('.tdimg') || !row.querySelector('.tdcontent')) {
+      return;
+    }
+    
+    // Find the publication ID from the paper div
+    const paperDiv = row.querySelector('.paper');
+    if (!paperDiv) return;
+    
+    const publicationId = paperDiv.id;
+    const publication = publications.find(p => p.id === publicationId);
+    
+    // SAFETY: If publication not found, always show the row
+    if (!publication) {
+      row.classList.remove('hidden');
+      return;
+    }
+    
+    let shouldShow = false;
+    
+    switch(filterType) {
+      case 'selected':
+        shouldShow = publication.selected;
+        break;
+      case 'all-date':
+        shouldShow = true;
+        break;
+      case 'all-topic':
+        shouldShow = true;
+        break;
+    }
+    
+    if (shouldShow) {
+      row.classList.remove('hidden');
+    } else {
+      row.classList.add('hidden');
+    }
+  });
+  
+  // Sort by date for all-date, by topic for all-topic, restore original order for selected
+  if (filterType === 'all-date') {
+    sortPublicationsByDate();
+  } else if (filterType === 'all-topic') {
+    sortPublicationsByTopic();
+  } else if (filterType === 'selected') {
+    restoreOriginalOrder();
+  }
+}
+
+function sortPublicationsByDate() {
+  const publicationTable = document.getElementById('publications-table');
+  const rows = Array.from(publicationTable.querySelectorAll('tr'));
+  
+  // Find publication rows
+  const publicationRows = rows.filter(row => {
+    const paperDiv = row.querySelector('.paper');
+    return paperDiv && paperDiv.id;
+  });
+  
+  // Sort by year (descending)
+  publicationRows.sort((a, b) => {
+    const aId = a.querySelector('.paper').id;
+    const bId = b.querySelector('.paper').id;
+    const aPub = publications.find(p => p.id === aId);
+    const bPub = publications.find(p => p.id === bId);
+    return bPub.year - aPub.year;
+  });
+  
+  // Reorder in DOM
+  publicationRows.forEach(row => {
+    publicationTable.appendChild(row);
+  });
+}
+
+function sortPublicationsByTopic() {
+  const publicationTable = document.getElementById('publications-table');
+  const rows = Array.from(publicationTable.querySelectorAll('tr'));
+  
+  // Find publication rows
+  const publicationRows = rows.filter(row => {
+    const paperDiv = row.querySelector('.paper');
+    return paperDiv && paperDiv.id;
+  });
+  
+  // Sort by first topic alphabetically
+  publicationRows.sort((a, b) => {
+    const aId = a.querySelector('.paper').id;
+    const bId = b.querySelector('.paper').id;
+    const aPub = publications.find(p => p.id === aId);
+    const bPub = publications.find(p => p.id === bId);
+    return aPub.topics[0].localeCompare(bPub.topics[0]);
+  });
+  
+  // Reorder in DOM
+  publicationRows.forEach(row => {
+    publicationTable.appendChild(row);
+  });
+}
+
+function restoreOriginalOrder() {
+  const publicationTable = document.getElementById('publications-table');
+  
+  // Remove all current publication rows
+  const currentRows = Array.from(publicationTable.querySelectorAll('tr'));
+  currentRows.forEach(row => {
+    const paperDiv = row.querySelector('.paper');
+    if (paperDiv && paperDiv.id) {
+      row.remove();
+    }
+  });
+  
+  // Add back in original order
+  originalOrder.forEach(row => {
+    publicationTable.appendChild(row);
+  });
+}
+
+// Store original order of publications
+let originalOrder = [];
+
+// Initialize with selected publications
+document.addEventListener('DOMContentLoaded', function() {
+  // Save original order
+  const publicationTable = document.getElementById('publications-table');
+  const rows = Array.from(publicationTable.querySelectorAll('tr'));
+  originalOrder = rows.filter(row => {
+    const paperDiv = row.querySelector('.paper');
+    return paperDiv && paperDiv.id;
+  });
+  
+  filterPublications('selected');
+});
+
+// News toggle function
+function toggleNews() {
+  const newsTable = document.getElementById('news-table');
+  const toggle = document.getElementById('news-toggle');
+  
+  if (newsTable.classList.contains('hidden')) {
+    newsTable.classList.remove('hidden');
+    toggle.textContent = '▼ Collapse';
+  } else {
+    newsTable.classList.add('hidden');
+    toggle.textContent = '▼ Expand';
+  }
+}
 </script>
 
 <!-- Google Analytics -->

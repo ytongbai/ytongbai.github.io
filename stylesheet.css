@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
@@ -63,46 +65,52 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+body, td, th, tr, p, a, strong, papertitle, button, input, select, textarea {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 570 !important;
+  color: #282828;
+}
+
+heading, h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #282828;
+}
+
+name, h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #282828;
+}
+
 a {
-  color: #1772d0;
+  color: #394FC1 !important;
   text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: #f09228;
-  text-decoration: none;
+  color: #23527c !important;
+  text-decoration: underline;
+  background-color: #F8F4ED !important;
+  transition: all 0.2s ease-in-out;
 }
 
-body,
-td,
-th,
-tr,
-p,
-a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px
+button, .btn {
+  font-size: 16px;
+  font-weight: 570 !important;
+  color: #282828;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 12px;
+  box-shadow: none;
+  transition: background 0.2s, border-color 0.2s;
 }
-
-strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-}
-
-heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
-}
-
-papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 700
-}
-
-name {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
+button:hover, .btn:hover {
+  background: #f5f5f5;
+  border-color: #999;
 }
 
 .one {
@@ -128,4 +136,163 @@ name {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+/* Publication Filter Styles */
+.filter-btn {
+  background-color: #f8f9fa;
+  border: 1px solid #394FC1;
+  color: #394FC1;
+  padding: 8px 16px;
+  margin-right: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 570 !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  background-color: #e9ecef;
+  border-color: #23527c;
+  color: #23527c;
+}
+
+.filter-btn.active {
+  background-color: #394FC1;
+  border-color: #394FC1;
+  color: #fff;
+}
+
+.publication-item {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.publication-item.hidden,
+#publications-table tr.hidden {
+  display: none;
+}
+
+.filter-btn-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+papertitle, a papertitle {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  color: #282828 !important;
+}
+
+.pub-filter-menu {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #282828;
+  font-family: inherit;
+}
+
+.pub-filter-link {
+  color: #394FC1;
+  cursor: pointer;
+  font-weight: 570 !important;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.pub-filter-link:hover,
+.pub-filter-link:focus {
+  text-decoration: underline;
+  color: #23527c;
+}
+
+.pub-filter-link.active {
+  font-weight: bold !important;
+  color: #394FC1;
+  text-decoration: none;
+}
+
+/* Bold links in the first paragraph (intro section) */
+td > p:first-of-type a {
+  font-weight: bold !important;
+}
+
+#publications-table strong {
+  font-weight: bold !important;
+  color: #394FC1 !important;
+}
+
+/* Preserve red text for special mentions like best paper nominations */
+#publications-table font[color="red"] strong {
+  color: red !important;
+}
+
+#publications-table .tdimg,
+#publications-table .tdcontent {
+  vertical-align: top !important;
+}
+
+#publications-table .tdimg img,
+#publications-table .tdimg video {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  display: block;
+}
+
+#publications-table .author-name {
+  color: #394FC1 !important;
+  font-weight: 570 !important;
+}
+
+/* Ensure author links are not bold */
+#publications-table .author-name a {
+  font-weight: 570 !important;
+}
+#publications-table .yutong-bai {
+  color: #394FC1 !important;
+  font-weight: bold !important;
+}
+
+/* Remove italic styling from all em tags */
+em {
+  font-style: normal !important;
+}
+
+/* Base styling for publication rows */
+#publications-table tr {
+  transition: all 0.2s ease-in-out;
+  border-radius: 8px;
+  margin: 4px 0;
+}
+
+/* Hover effect for publication rows */
+#publications-table tr:hover {
+  background-color: #F2E8D8 !important;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+  transform: translateY(-2px) !important;
+  border-radius: 8px !important;
+}
+
+/* News Section */
+.news-content {
+  padding: 0;
+}
+
+.news-content.collapsed {
+  display: none;
+}
+
+#news-table {
+  display: block;
+}
+
+#news-table.hidden {
+  display: none;
 }
