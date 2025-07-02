@@ -93,7 +93,7 @@ a:focus,
 a:hover {
   color: #23527c !important;
   text-decoration: underline;
-  background-color: #F8F4ED !important;
+  background-color: #F2E8D8 !important;
   transition: all 0.2s ease-in-out;
 }
 
@@ -209,6 +209,8 @@ papertitle, a papertitle {
 .pub-filter-link:focus {
   text-decoration: underline;
   color: #23527c;
+  background-color: #F2E8D8 !important;
+  transition: all 0.2s ease-in-out;
 }
 
 .pub-filter-link.active {
@@ -296,4 +298,12 @@ em {
 
 #news-table.hidden {
   display: none;
+}
+
+/* News toggle hover effect */
+#news-toggle:hover {
+  background-color: #F2E8D8 !important;
+  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
+  padding: 2px 4px;
 }
