@@ -96,18 +96,19 @@
               <div style="font-size:20px;font-weight:bold;display:inline;">News</div>
               <div class="news-toggle-menu" style="display:inline; margin-left: 10px;">
                 (
-                  <span id="news-toggle" onclick="toggleNews()" style="color: #394FC1; cursor: pointer; font-weight: 400;">▼ Collapse</span>
+                  <span id="news-toggle" onclick="toggleNews()" style="color: #394FC1; cursor: pointer; font-weight: 400;">▼ Expand</span>
                 )
               </div>
             </td>
           </tr>
         </tbody></table>
 
-        <table id="news-table" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table id="news-table" class="hidden" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <div id="news-content" class="news-content">
                 <ul>
+                  <li>[07/03/2025] Invited talk at 1X.</li>
                   <li>[06/12/2025] Invited talk at <a href="https://ai4cc.net/">CVPR 2025 workshop</a>.</li>
                   <li>[10/28/2025] Invited talk at MIT.</li>
                   <li>[08/16/2025] Awarded <a href="https://risingstars-eecs.mit.edu/participants/yutong-bai-2/">EECS Rising Star in MIT</a>.</li>
@@ -175,7 +176,7 @@
                 <br>
                 <span class="author-name yutong-bai">Yutong Bai</span>*, <span class="author-name">Danny Tran</span>*, <span class="author-name">Amir Bar</span>*, <span class="author-name"><a href="http://yann.lecun.com/">Yann LeCun</a></span><span style="font-size: 0.8em;">†</span>, <span class="author-name"><a href="https://people.eecs.berkeley.edu/~trevor/">Trevor Darrell</a></span><span style="font-size: 0.8em;">†</span>, <span class="author-name"><a href="https://people.eecs.berkeley.edu/~malik/">Jitendra Malik</a></span><span style="font-size: 0.8em;">†</span>
                 <br>
-                Tech Report, 2025
+                Arxiv, 2025
                 <br>
               </p>
               <div class="paper" id="peva">
@@ -214,6 +215,30 @@
 
           <tr>
             <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
+              <img src='images/tardis.jpg'>
+            </td>
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
+              <p>
+                <a href="https://arxiv.org/abs/2506.11302">
+                  <papertitle>TARDIS STRIDE: A Spatio-Temporal Road Image Dataset and World Model for Autonomy</papertitle>
+                </a>
+                <br>
+                <span class="author-name">Héctor Carrión</span>*, <span class="author-name yutong-bai">Yutong Bai</span>*, <span class="author-name">Víctor A. Hernández Castro</span>*, <span class="author-name">Kishan Panaganti</span>, <span class="author-name">Ayush Zenith</span>, <span class="author-name">Matthew Trang</span>, <span class="author-name">Tony Zhang</span>, <span class="author-name"><a href="https://www.eas.caltech.edu/people/perona">Pietro Perona</a></span>, <span class="author-name"><a href="https://people.eecs.berkeley.edu/~malik/">Jitendra Malik</a></span>
+                <br>
+                Arxiv, 2025
+                <br>
+              </p>
+              <div class="paper" id="tardis">
+                <a href="https://arxiv.org/abs/2506.11302">paper</a> &nbsp/&nbsp
+                <a href="https://www.tera-ai.com/blog/tardis">project page</a> &nbsp/&nbsp
+                <a href="https://huggingface.co/datasets/Tera-AI/STRIDE">data</a> &nbsp/&nbsp
+                <a href="https://huggingface.co/datasets/Tera-AI/STRIDE">code</a> &nbsp/&nbsp
+                <a href="https://huggingface.co/datasets/Tera-AI/STRIDE">model</a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
               <img src='images/bai2022point.png'>
             </td>
             <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
@@ -233,33 +258,6 @@
                 <a href="https://github.com/facebookresearch/PLRC">code</a> &nbsp/&nbsp
                 <a href="https://drive.google.com/file/d/173gpMUxv_3blUABBalKYZZ7lgxrhFLa2/view?usp=sharing">video</a> &nbsp/&nbsp
                 <a href="https://drive.google.com/file/d/1mmnzBO-DtCw46pqLhFn6ok2SYfBjojom/view?usp=sharing">poster</a>
-              </div>
-
-            </td>
-          </tr>
-          
-
-          <tr>
-            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
-              <img src='images/tardis.jpg'>
-            </td>
-            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
-              <p>
-                <a href="https://arxiv.org/abs/2506.11302">
-                  <papertitle>TARDIS STRIDE: A Spatio-Temporal Road Image Dataset and World Model for Autonomy</papertitle>
-                </a>
-                <br>
-                <span class="author-name">Héctor Carrión</span>*, <span class="author-name yutong-bai">Yutong Bai</span>*, <span class="author-name">Víctor A. Hernández Castro</span>*, <span class="author-name">Kishan Panaganti</span>, <span class="author-name">Ayush Zenith</span>, <span class="author-name">Matthew Trang</span>, <span class="author-name">Tony Zhang</span>, <span class="author-name"><a href="https://www.eas.caltech.edu/people/perona">Pietro Perona</a></span>, <span class="author-name"><a href="https://people.eecs.berkeley.edu/~malik/">Jitendra Malik</a></span>
-                <br>
-                Tech Report, 2025
-                <br>
-              </p>
-              <div class="paper" id="tardis">
-                <a href="https://arxiv.org/abs/2506.11302">paper</a> &nbsp/&nbsp
-                <a href="https://www.tera-ai.com/blog/tardis">project page</a> &nbsp/&nbsp
-                <a href="https://huggingface.co/datasets/Tera-AI/STRIDE">data</a> &nbsp/&nbsp
-                <a href="https://huggingface.co/datasets/Tera-AI/STRIDE">code</a> &nbsp/&nbsp
-                <a href="https://huggingface.co/datasets/Tera-AI/STRIDE">model</a>
               </div>
             </td>
           </tr>
@@ -323,7 +321,7 @@
                 <br>
                 <span class="author-name">David M Chan</span>, <span class="author-name">Rodolfo Corona</span>, <span class="author-name">Joonyong Park</span>, <span class="author-name">Cheol Jun Cho</span>, <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Trevor Darrell</span>
                 <br>
-                Tech Report, 2024
+                Arxiv, 2024
                 <br>
               </p>
               <div class="paper" id="vl">
@@ -367,7 +365,7 @@
                 <br>
                 <span class="author-name">Huzheng Yang</span>, <span class="author-name">Katherine Xu</span>, <span class="author-name">Michael D. Grossberg</span>, <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Jianbo Shi</span>
                 <br>
-                Tech Report, 2025
+                Arxiv, 2025
                 <br>
               </p>
               <div class="paper" id="mood">
@@ -421,7 +419,7 @@
                 <span class="author-name">Vikas Chandra</span>,
                 <span class="author-name"><a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a></span>
                 <br>
-                Tech Report, 2020
+                Arxiv, 2020
                 <br>
               </p>
               <div class="paper" id="bai2020can">
@@ -561,7 +559,7 @@
                 <br>
                 <span class="author-name">Junyu Zhang</span>, <span class="author-name">Runpei Dong</span>, <span class="author-name">Han Wang</span>, <span class="author-name">Xuying Ning</span>, <span class="author-name">Haoran Geng</span>, <span class="author-name">Peihao Li</span>, <span class="author-name">Xialin He</span>, <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Jitendra Malik</span>, <span class="author-name">Saurabh Gupta</span>
                 <br>
-                Tech Report, 2025
+                Arxiv, 2025
                 <br>
               </p>
               <div class="paper" id="alphaone">
@@ -584,7 +582,7 @@
                 <br>
                 <span class="author-name">Declan Kutscher</span>, <span class="author-name">David M Chan</span>, <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Trevor Darrell</span>, <span class="author-name">Ritwik Gupta</span>
                 <br>
-                Tech Report, 2025
+                Arxiv, 2025
                 <br>
               </p>
               <div class="paper" id="reorder">
@@ -607,7 +605,7 @@
                 <br>
                 <span class="author-name">Kaixiong Gong</span>, <span class="author-name">Kaituo Feng</span>, <span class="author-name">Bohao Li</span>, <span class="author-name">Yibing Wang</span>, <span class="author-name">Mofan Cheng</span>, <span class="author-name">Shijia Yang</span>, <span class="author-name">Jiaming Han</span>, <span class="author-name">Benyou Wang</span>, <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Zhuoran Yang</span>, <span class="author-name">Xiangyu Yue</span>
                 <br>
-                Tech Report, 2024
+                Arxiv, 2024
                 <br>
               </p>
               <div class="paper" id="avodyssey">
@@ -786,7 +784,7 @@
                 <br>
                 <span class="author-name">George Tang</span>, <span class="author-name">Aditya Agarwal</span>, <span class="author-name">Weiqiao Han</span>, <span class="author-name">Trevor Darrell</span>, <span class="author-name yutong-bai">Yutong Bai</span>
                 <br>
-                Tech Report, 2025
+                Arxiv, 2025
                 <br>
               </p>
               <div class="paper" id="vq3d">
@@ -838,7 +836,7 @@ const publications = [
     id: 'peva',
     title: 'Whole-Body Conditioned Egocentric Video Prediction',
     year: 2025,
-    venue: 'Tech Report',
+    venue: 'Arxiv',
     topics: ['video-prediction', 'egocentric', 'generative'],
     selected: true
   },
@@ -846,7 +844,7 @@ const publications = [
     id: 'tardis',
     title: 'TARDIS STRIDE: A Spatio-Temporal Road Image Dataset and World Model for Autonomy',
     year: 2025,
-    venue: 'Tech Report',
+    venue: 'Arxiv',
     topics: ['autonomous-driving', 'dataset', 'world-model'],
     selected: true
   },
@@ -862,7 +860,7 @@ const publications = [
     id: 'mood',
     title: '"I Know It When I See It": Mood Spaces for Connecting and Expressing Visual Concepts',
     year: 2025,
-    venue: 'Tech Report',
+    venue: 'Arxiv',
     topics: ['visual-concepts', 'mood-spaces', 'expression'],
     selected: true
   },
@@ -870,7 +868,7 @@ const publications = [
     id: 'alphaone',
     title: 'AlphaOne: Reasoning Models Thinking Slow and Fast at Test Time',
     year: 2025,
-    venue: 'Tech Report',
+    venue: 'Arxiv',
     topics: ['reasoning-models', 'thinking-slow-fast', 'test-time'],
     selected: false
   },
@@ -878,7 +876,7 @@ const publications = [
     id: 'reorder',
     title: 'REOrdering Patches Improves Vision Models',
     year: 2025,
-    venue: 'Tech Report',
+    venue: 'Arxiv',
     topics: ['vision-models', 'patches', 'improvement'],
     selected: false
   },
@@ -911,7 +909,7 @@ const publications = [
     id: 'vl',
     title: 'Analyzing The Language of Visual Tokens',
     year: 2024,
-    venue: 'Tech Report',
+    venue: 'Arxiv',
     topics: ['visual-tokens', 'language-analysis'],
     selected: false
   },
@@ -919,7 +917,7 @@ const publications = [
     id: 'avodyssey',
     title: 'AV-Odyssey Bench: Can Your Multimodal LLMs Really Understand Audio-Visual Information?',
     year: 2024,
-    venue: 'Tech Report',
+    venue: 'Arxiv',
     topics: ['multimodal-llms', 'audio-visual-information', 'benchmark'],
     selected: false
   },
@@ -1027,7 +1025,7 @@ const publications = [
     id: 'bai2020can',
     title: 'Can Temporal Information Help with Contrastive Self-Supervised Learning?',
     year: 2020,
-    venue: 'Tech report',
+    venue: 'Arxiv',
     topics: ['contrastive-learning', 'temporal-information', 'self-supervised'],
     selected: true
   },
@@ -1076,7 +1074,7 @@ const publications = [
     id: 'vq3d',
     title: 'Vector Quantized Feature Fields for Fast 3D Semantic Lifting',
     year: 2025,
-    venue: 'Tech Report',
+    venue: 'Arxiv',
     topics: ['3d', 'semantic-lifting', 'vector-quantization'],
     selected: false
   },
@@ -1239,7 +1237,7 @@ function toggleNews() {
   
   if (newsTable.classList.contains('hidden')) {
     newsTable.classList.remove('hidden');
-    toggle.textContent = '▼ Collapse';
+    toggle.textContent = '▼ Expand';
   } else {
     newsTable.classList.add('hidden');
     toggle.textContent = '▼ Expand';
