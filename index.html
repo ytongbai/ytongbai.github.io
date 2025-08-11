@@ -203,6 +203,27 @@
 
           <tr>
             <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
+              <img src='images/ssh.gif'>
+            </td>
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
+              <p>
+                <a href="https://arxiv.org/abs/2507.12549">
+                  <papertitle>The Serial Scaling Hypothesis</papertitle>
+                </a>
+                <br>
+                <span class="author-name">Yuxi Liu</span>, <span class="author-name">Konpat Preechakul</span>, <span class="author-name">Kananart Kuwaranancharoen</span>, <span class="author-name yutong-bai">Yutong Bai</span>
+                <br>
+                Arxiv, 2025
+                <br>
+              </p>
+              <div class="paper" id="ssh">
+                <a href="https://arxiv.org/abs/2507.12549">paper</a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
               <img src='static/images/visual_sentences.jpg'>
             </td>
             <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
@@ -408,6 +429,29 @@
                 <a href="https://arxiv.org/abs/2208.12256">paper</a> &nbsp/&nbsp
                 <a href="https://github.com/UCSC-VLAA/DMAE">code</a> &nbsp/&nbsp
                 <a href="https://github.com/UCSC-VLAA/DMAE">model</a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tdimg" style="padding:20px;width:26%;vertical-align:top">
+              <img src='images/bai2020vitsVScnns.png'>
+            </td>
+            <td class="tdcontent" style="padding:20px;width:74%;vertical-align:top">
+              <p>
+                <a href="https://arxiv.org/abs/2111.05464">
+                  <papertitle>Are Transformers More Robust than CNNs?</papertitle>
+                </a>
+                <br>
+                <span class="author-name yutong-bai">Yutong Bai</span>, <span class="author-name">Jieru Mei</span>, <span class="author-name"><a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a></span>, <span class="author-name">Cihang Xie</span>
+                <br>
+                NeurIPS, 2021
+                <br>
+              </p>
+              <div class="paper" id="bai2020vitsVScnns">
+                <a href="https://arxiv.org/abs/2111.05464">paper</a> &nbsp/&nbsp
+                <a href="https://github.com/ytongbai/ViTs-vs-CNNs">code</a> &nbsp/&nbsp
+                <a href="https://github.com/ytongbai/ViTs-vs-CNNs">model</a>
               </div>
             </td>
           </tr>
@@ -852,6 +896,14 @@ const publications = [
     venue: 'Arxiv',
     topics: ['video-prediction', 'egocentric', 'generative'],
     selected: true
+  },
+  {
+    id: 'ssh',
+    title: 'The Serial Scaling Hypothesis',
+    year: 2025,
+    venue: 'Arxiv',
+    topics: ['serial-computation', 'scaling-hypothesis', 'complexity-theory'],
+    selected: false
   },
   {
     id: 'tardis',
