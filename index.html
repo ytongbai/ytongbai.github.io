@@ -56,6 +56,25 @@
       margin-left: 0;
       padding-left: 0;
     }
+
+    @media (max-width: 600px) {
+      /* Profile section: stack photo and text vertically on mobile */
+      .profile-photo-cell {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding: 15px 0 !important;
+      }
+      .profile-text-cell {
+        display: block !important;
+        width: 100% !important;
+        padding: 15px 0 !important;
+      }
+      .profile-photo-cell img {
+        max-width: 200px !important;
+        width: auto !important;
+      }
+    }
   </style>
 </head>
 
@@ -65,10 +84,10 @@
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr style="padding:0px">
-            <td style="padding:1%;width:25%;vertical-align:top">
+            <td class="profile-photo-cell" style="padding:1%;width:25%;vertical-align:top">
               <a href="images/Yutong.jpeg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/Yutong.jpeg" class="hoverZoomLink"></a>
             </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
+            <td class="profile-text-cell" style="padding:2.5%;width:75%;vertical-align:middle">
               <p style="text-align:left">
                 <name>Yutong Bai</name>
               </p>
@@ -106,6 +125,7 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <div id="news-content" class="news-content">
                 <ul>
+                  <li>[01/21/2026] Invited talk at Stanford.</li>
                   <li>[12/02/2025] Invited talk in <a href="https://neurips.cc/virtual/2025/loc/san-diego/109587">NeurIPS tutorial</a>.</li>
                   <li>[11/20/2025] Guest lecture at NYU.</li>
                   <li>[10/21/2025] Guest lecture at UC Berkeley & UCSF.</li>
@@ -274,7 +294,7 @@
                 <br>
                 <span class="author-name">Yuxi Liu</span>, <span class="author-name">Konpat Preechakul</span>, <span class="author-name">Kananart Kuwaranancharoen</span>, <span class="author-name yutong-bai">Yutong Bai</span>
                 <br>
-                Arxiv, 2025
+                ICLR, 2026
                 <br>
               </p>
               <div class="paper" id="ssh">
@@ -938,8 +958,8 @@ const publications = [
   {
     id: 'ssh',
     title: 'The Serial Scaling Hypothesis',
-    year: 2025,
-    venue: 'Arxiv',
+    year: 2026,
+    venue: 'ICLR',
     topics: ['serial-computation', 'scaling-hypothesis', 'complexity-theory'],
     selected: true
   },
